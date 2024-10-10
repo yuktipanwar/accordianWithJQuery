@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <h2>Accordian with JQuery</h2>
+        <style>
+            #body{
+                padding: 0px;
+                margin: 0px;
+            }
+
+            #accordian, #plus, #accordian2, #plus2, #accordian3, #plus3{
+                width: 100%;
+                height: auto;
+                background-color: rgb(255, 205, 255);
+                padding: 10px;
+                box-sizing: border-box;
+                cursor: pointer;
+                position: relative;  /*to keep a div inside another div*/
+                text-align: left;
+
+            }
+
+            #plus, #plus2, #plus3{
+                position: absolute;   /*to keep a div inside another div*/
+                width: 50px;
+                top: 0px;
+                right: 0px;
+                text-align:right;
+
+            }
+
+            #content, #content2, #content3{
+                font-size: 12px;
+                width: 100%;
+                height: auto;
+                padding: 5px;
+                box-sizing: border-box;
+            }
+
+        </style>
+    </head>
+    <body>
+
+        <div id="accordian">
+            Section 1
+            <div id="plus">+</div>
+        </div>
+        <div id="content">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+            when an unknown printer took a galley of type and scrambled it to make a type 
+            specimen book. It has survived not only five centuries, but also the leap into 
+            electronic typesetting, remaining essentially unchanged. It was popularised in 
+            the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
+            and more recently with desktop publishing software like Aldus PageMaker including 
+            versions of Lorem Ipsum.
+
+        </div>
+
+
+        <div id="accordian2">
+            Section 2
+            <div id="plus2">+</div>
+        </div>
+        <div id="content2">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+            when an unknown printer took a galley of type and scrambled it to make a type 
+            specimen book. It has survived not only five centuries, but also the leap into 
+            electronic typesetting, remaining essentially unchanged. It was popularised in 
+            the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
+            and more recently with desktop publishing software like Aldus PageMaker including 
+            versions of Lorem Ipsum.
+
+        </div>
+
+
+
+        <div id="accordian3">
+            Section 3
+            <div id="plus3">+</div>
+        </div>
+        <div id="content3">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+            when an unknown printer took a galley of type and scrambled it to make a type 
+            specimen book. It has survived not only five centuries, but also the leap into 
+            electronic typesetting, remaining essentially unchanged. It was popularised in 
+            the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
+            and more recently with desktop publishing software like Aldus PageMaker including 
+            versions of Lorem Ipsum.
+
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#content,  #content2, #content3").hide();
+
+                $("#accordian").click(function(){
+                    $("#content").slideToggle("slow");
+                    var x =$("#plus").text();
+                    if(x=="-"){
+                        $("#plus").show("slow").text("+");
+                    }else{
+                        $("#plus").show("slow").text("-");
+                    
+                    }
+                });
+
+                $("#accordian2").click(function(){
+                    $("#content2").slideToggle("slow");
+                    var x =$("#plus2").text();
+                    if(x=="-"){
+                        $("#plus2").show("slow").text("+");
+                    }else{
+                        $("#plus2").show("slow").text("-");
+                    
+                    }
+                });
+
+                $("#accordian3").click(function(){
+                    $("#content3").slideToggle("slow");
+                    var x =$("#plus3").text();
+                    if(x=="-"){
+                        $("#plus3").show("slow").text("+");
+                    }else{
+                        $("#plus3").show("slow").text("-");
+                    
+                    }  
+                });
+            });
+        </script>
+    </body>
+</html>
