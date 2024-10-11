@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: inherit;
+}
+
+
+body {
+  background-color: rgb(247, 205, 246) !important; 
+  font-family: 'Open Sans', Arial, Helvetica, Sans-serif, Verdana, Tahoma;
+}
+
+ul { list-style-type: none; }
+
+.accordian {
+  background-color: #f0f0f0; /* light gray background */
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.accordian-header {
+  background-color: #797979; /* dark gray background */
+  color: #fff; /* white text */
+  padding: 3px;
+  border-bottom: 1px solid  #797979;
+}
+
+
+.accordian-header button {
+  background-color:  #cac7c7; /* dark gray background */
+  color: black; /* white text */
+  border: none;
+  padding: 10px;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+}
+
+.accordian-header button:hover {
+  background-color: #fffd92; /* darker gray background on hover */
+}
+
+.collapse{
+  margin-bottom: 8px;
+}
+
+.subBreeds li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  background-color: #d9d7d7;
+}
